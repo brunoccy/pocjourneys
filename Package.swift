@@ -21,3 +21,21 @@ let package = Package(
             sources: ["Home", "Login", "Profile"]),
     ]
 )
+
+extension Target {
+    static func target(name: String,
+                       sources: [String],
+                       dependencies: [Target.Dependency] = [])
+        -> Target {
+            return .target(name: name,
+                           dependencies: dependencies,
+                           path: "Sources",
+                           exclude: [],
+                           sources: sources,
+                           publicHeadersPath: nil,
+                           cSettings: nil,
+                           cxxSettings: nil,
+                           swiftSettings: nil,
+                           linkerSettings: nil)
+        }
+}
