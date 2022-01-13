@@ -29,12 +29,12 @@ let package = Package(
 //        .target(name: "pocjournys", sources: ["Home", "Login", "Profile"]),
         
         .target(name: "Home", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
-                path: "Home/Sources"),
+                path: "Home/Sources/Home"),
 
         .target(name: "Login", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
-                path: "Login/Sources"),
+                path: "Login/Sources/Login"),
 
         .target(name: "Profile", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
-                path: "Profile/Sources"),
+                path: "Profile/Sources/Profile"),
     ]
 )
