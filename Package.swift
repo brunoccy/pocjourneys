@@ -19,8 +19,5 @@ let package = Package(
         .target(
             name: "pocjournys",
             sources: ["Home", "Login", "Profile"]),
-        .testTarget(
-            name: "NetworkingInterfacesTests",
-            dependencies: ["NetworkingInterfaces"]),
     ]
 )
