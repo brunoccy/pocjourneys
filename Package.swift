@@ -12,17 +12,13 @@ let package = Package(
             name: "pocjournys",
             targets: ["pocjournys"]),
     ],
-    dependencies: [
-        .package(path: "Home"),
-        .package(path: "Login"),
-        .package(path: "Profile")
-    ],
+    dependencies: [],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "pocjournys",
-            dependencies: ["Home", "Login", "Profile"]),
+            sources: ["Home", "Login", "Profile"]),
         .testTarget(
             name: "NetworkingInterfacesTests",
             dependencies: ["NetworkingInterfaces"]),
