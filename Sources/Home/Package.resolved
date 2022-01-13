@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AnalyticsInterfaces",
+        "repositoryURL": "https://github.com/brunoccy/AnalyticsInterfaces",
+        "state": {
+          "branch": "main",
+          "revision": "855c671df6f431e1050fcbde0fba825a6a20e74b",
+          "version": null
+        }
+      },
+      {
+        "package": "Core",
+        "repositoryURL": "https://github.com/brunoccy/Core",
+        "state": {
+          "branch": "main",
+          "revision": "6f7915a6f5097f6a6dc718c81a024d06bf5a635e",
+          "version": null
+        }
+      },
+      {
+        "package": "NetworkingInterfaces",
+        "repositoryURL": "https://github.com/brunoccy/NetworkingInterfaces.git",
+        "state": {
+          "branch": "main",
+          "revision": "a2fc0fb0bc9759cd9015fb19a2db111ca2b47651",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
