@@ -13,8 +13,8 @@ let package = Package(
             targets: ["Login"]),
     ],
     dependencies: [
-        .package(path: "../Core"),
-        .package(path: "../AnalyticsInterfaces"),
+        .package(url: "https://github.com/brunoccy/Core", .branch("main")),
+        .package(url: "https://github.com/brunoccy/AnalyticsInterfaces", .branch("main")),
         .package(url: "https://github.com/brunoccy/NetworkingInterfaces.git", .branch("main")),
     ],
     targets: [
