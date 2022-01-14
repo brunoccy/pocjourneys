@@ -20,11 +20,11 @@
         }
       },
       {
-        "package": "NetworkingPoc",
-        "repositoryURL": "https://github.com/brunoccy/NetworkingPoc",
+        "package": "NetworkingInterfaces",
+        "repositoryURL": "https://github.com/brunoccy/NetworkingInterfaces",
         "state": {
           "branch": "main",
-          "revision": "7b068527c87737d918e543896e0a2a968d8ba2b5",
+          "revision": "a2fc0fb0bc9759cd9015fb19a2db111ca2b47651",
           "version": null
         }
       }

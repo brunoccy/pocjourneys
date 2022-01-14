@@ -29,20 +29,20 @@ let package = Package(
 //        .target(name: "pocjournys", sources: ["Home", "Login", "Profile"]),
         
         .target(name: "Home", dependencies: ["Core", "AnalyticsInterfaces",
-                                             .product(name: "NetworkingInterfaces", package: "NetworkingPoc"),
+                                             .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces"),
                                             ],
                 path: "Home/Sources"),
         .testTarget(name: "HomeTests", dependencies: ["Home"],
                 path: "Home/Tests"),
 
         .target(name: "Login", dependencies: ["Core", "AnalyticsInterfaces",
-                                                .product(name: "NetworkingInterfaces", package: "NetworkingPoc")],
+                                                .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces")],
                 path: "Login/Sources"),
         .testTarget(name: "LoginTests", dependencies: ["Login"],
                     path: "Login/Tests"),
 
         .target(name: "Profile", dependencies: ["Core", "AnalyticsInterfaces",
-                                                    .product(name: "NetworkingInterfaces", package: "NetworkingPoc")],
+                                                    .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces")],
                         path: "Profile/Sources"),
         .testTarget(name: "ProfileTests", dependencies: ["Profile"],
                         path: "Profile/Tests"),
