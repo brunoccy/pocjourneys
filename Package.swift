@@ -10,9 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
 //        .library(name: "pocjournys", targets: ["pocjournys"]),
         
-        .library(name: "Home", targets: ["Home"]),
-        .library(name: "Login", targets: ["Login"]),
-        .library(name: "Profile", targets: ["Profile"]),
+
     ],
     dependencies: [
 //        .package(path: "Sources/pocjourneys/Home"),
