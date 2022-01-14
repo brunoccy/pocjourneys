@@ -21,24 +21,28 @@ let package = Package(
         
         .package(name: "Core", url: "https://github.com/brunoccy/Core", .branch("main")),
         .package(name: "AnalyticsInterfaces", url: "https://github.com/brunoccy/AnalyticsInterfaces", .branch("main")),
-        .package(name: "NetworkingInterfaces", url: "https://github.com/brunoccy/NetworkingInterfaces.git", .branch("main")),
+        .package(name: "NetworkingPoc", url: "https://github.com/brunoccy/NetworkingPoc", .branch("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
 //        .target(name: "pocjournys", sources: ["Home", "Login", "Profile"]),
         
-        .target(name: "Home", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
+        .target(name: "Home", dependencies: ["Core", "AnalyticsInterfaces",
+                                             .product(name: "NetworkingInterfaces", package: "NetworkingPoc"),
+                                            ],
                 path: "Home/Sources"),
         .testTarget(name: "HomeTests", dependencies: ["Home"],
                 path: "Home/Tests"),
 
-        .target(name: "Login", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
+        .target(name: "Login", dependencies: ["Core", "AnalyticsInterfaces",
+                                                .product(name: "NetworkingInterfaces", package: "NetworkingPoc")],
                 path: "Login/Sources"),
         .testTarget(name: "LoginTests", dependencies: ["Login"],
                     path: "Login/Tests"),
 
-        .target(name: "Profile", dependencies: ["Core", "AnalyticsInterfaces", "NetworkingInterfaces"],
+        .target(name: "Profile", dependencies: ["Core", "AnalyticsInterfaces",
+                                                    .product(name: "NetworkingInterfaces", package: "NetworkingPoc")],
                         path: "Profile/Sources"),
         .testTarget(name: "ProfileTests", dependencies: ["Profile"],
                         path: "Profile/Tests"),
