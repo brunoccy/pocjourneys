@@ -21,7 +21,7 @@ let package = Package(
         
         .package(name: "Core", url: "https://github.com/brunoccy/Core", .branch("main")),
         .package(name: "AnalyticsInterfaces", url: "https://github.com/brunoccy/AnalyticsInterfaces", .branch("main")),
-        .package(name: "NetworkingPoc", url: "https://github.com/brunoccy/NetworkingPoc", .branch("main")),
+        .package(name: "NetworkingInterfaces", url: "https://github.com/brunoccy/NetworkingInterfaces", .branch("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
