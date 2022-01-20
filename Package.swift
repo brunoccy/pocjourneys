@@ -15,34 +15,30 @@ let package = Package(
         .library(name: "Profile", targets: ["Profile"]),
     ],
     dependencies: [
-//        .package(path: "Sources/pocjourneys/Home"),
-//        .package(path: "Sources/pocjourneys/Login"),
-//        .package(path: "Sources/pocjourneys/Profile"),
-        
-        .package(name: "Core", url: "https://github.com/brunoccy/Core", .branch("main")),
-        .package(name: "AnalyticsInterfaces", url: "https://github.com/brunoccy/AnalyticsInterfaces", .branch("main")),
-        .package(name: "NetworkingInterfaces", url: "https://github.com/brunoccy/NetworkingInterfaces", .branch("main")),
+        .package(name: "StructuralSPM", url: "https://github.com/FelippeMatos/multi-structural-module", .branch("ios/bruno-spm")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
 //        .target(name: "pocjournys", sources: ["Home", "Login", "Profile"]),
         
-        .target(name: "Home", dependencies: ["Core", "AnalyticsInterfaces",
-                                             .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces"),
-                                            ],
+        .target(name: "Home", dependencies: [.product(name: "Core", package: "StructuralSPM"),
+                                             .product(name: "AnalyticsInterfaces", package: "StructuralSPM"),
+                                             .product(name: "NetworkingInterfaces", package: "StructuralSPM"),],
                 path: "Home/Sources"),
         .testTarget(name: "HomeTests", dependencies: ["Home"],
                 path: "Home/Tests"),
 
-        .target(name: "Login", dependencies: ["Core", "AnalyticsInterfaces",
-                                                .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces")],
+        .target(name: "Login", dependencies: [.product(name: "Core", package: "StructuralSPM"),
+                                              .product(name: "AnalyticsInterfaces", package: "StructuralSPM"),
+                                              .product(name: "NetworkingInterfaces", package: "StructuralSPM"),],
                 path: "Login/Sources"),
         .testTarget(name: "LoginTests", dependencies: ["Login"],
                     path: "Login/Tests"),
 
-        .target(name: "Profile", dependencies: ["Core", "AnalyticsInterfaces",
-                                                    .product(name: "NetworkingInterfaces", package: "NetworkingInterfaces")],
+        .target(name: "Profile", dependencies: [.product(name: "Core", package: "StructuralSPM"),
+                                                .product(name: "AnalyticsInterfaces", package: "StructuralSPM"),
+                                                .product(name: "NetworkingInterfaces", package: "StructuralSPM"),],
                         path: "Profile/Sources"),
         .testTarget(name: "ProfileTests", dependencies: ["Profile"],
                         path: "Profile/Tests"),
